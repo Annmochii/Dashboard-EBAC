@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<title>HTML - Anna Maria Home</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+		<style>
+			* {
+			  box-sizing: border-box;
+
+			}
+
+			body {
+			  font-family: 'Poppins', Arial, Helvetica, sans-serif;
+			  background-color: #f0f2f5;
+			  margin: 0px;
+			  overflow-x: hidden;
+			}
+
+			/* Style the header */
+			header {
+			  margin-inline: 18px;
+			  margin-bottom: 23px;
+			  margin-top: 21px;
+			  display: flex;
+			  align-items: flex-end;
+			  justify-content: space-between;
+			}
+
+			h2 {
+			  margin: 0;
+			  font-weight: 600;
+			  font-size: 24px;
+			  color: #2C2C2C;
+			}
+
+			a {
+			  padding: 0;
+			  margin: 0;
+			  color: #38A2FF;
+			}
+
+			a:visited {
+			  color: #38A2FF;
+			}
+
+			a:hover {
+			  color: #007BE7;
+			}
+
+			#imgheader {
+			  border-radius: 21px;
+			  height: 42px;
+			  width: 42px;
+			}
+
+			hr.solid {
+				width: 100%;
+				margin-inline: 18px;
+				border: none;
+				height: 1px;
+				background-color: #E4E6EB;
+			}
+
+			section#title {
+				padding: ;0
+				margin: 0;
+			}
+
+			main {
+				display: grid;
+				grid-template-columns: 3fr 7fr;
+				grid-gap: 32px;
+				margin-inline: 18px;
+				margin-block: 32px;
+			}
+
+			section.body {
+				display: flex;
+				flex-direction: column;
+				gap: 32px;
+			}
+
+
+			nav {
+			  float: left;
+			  width: 100%;
+			}
+
+			nav ul {
+			  list-style-type: none;
+			  padding: 0;
+			  margin: 0;
+			}
+
+			article {
+			  box-sizing: border-box;
+			  float: left;
+			  padding-inline: 36px;
+			  padding-top: 40px;
+			  padding-bottom: 32px;
+			  background-color: white;
+			  border-radius: 20px;
+			  width: 100%;
+			}
+
+			#profile {
+			  display: flex;
+			  flex-direction: column;
+			  align-items: center;
+			  justify-content: center;
+			}
+
+			#imgprofile {
+			  width: 124px;
+			  height: 124px;
+			  border-radius: 100px;
+			}
+
+			#name {
+			  margin-top: 16px;
+			  margin-botom: 8px;
+			}
+
+			ul#interests {
+			  margin-block: 8px;
+			  display: flex;
+			  flex-direction: row;
+			  gap: 8px;
+			  padding: 0;
+			}
+
+			li.interest {
+			  list-style: none;
+			  background-color: #F5F0FF;
+			  color: #9568FF;
+			  font-size: 12px;
+			  border-radius: 7px;
+			  font-weight: 400;
+		 	  padding-block: 4px;
+			  padding-inline: 8px;
+			}
+
+			button {
+			  background-color: #38A2FF;
+			  color: #EBF6FF;
+			  border: none;
+			  font-family: 'Poppins', Arial, sans-serif;
+			  font-weight: 500;
+			  font-size: 14;
+			  padding-block: 12px;
+			  width: 100%;
+			  border-radius: 14px;
+			  text-align: center;
+			  text-decoration: none;
+			  display: inline-block;
+			  margin-block: 16px;
+			}
+
+			button:hover {
+				background-color: #007BE7;
+			}
+
+			#bio {
+			  font-size: 14px;
+			  color: #4D4D4D;
+			  margin-block: 8px;
+			}
+
+			p {
+			  color: #4D4D4D;
+			  margin: 0;
+			}
+
+			ul#socials {
+			  align-items: center;
+			  margin: 0;
+			  display: flex;
+			  flex-direction: row;
+			  gap: 8px;
+			  padding: 0;
+			}
+
+			li.social {
+			  color: #A3A9B7;
+			  list-style: none;
+			  font-size: 12px;
+			  border-radius: 7px;
+			  font-weight: 400;
+			}
+
+			a.social:visited {
+			  color: #A3A9B7;
+			}
+
+			a.social:hover {
+			  color: #757880;
+			}
+
+			div.dot {
+			  background-color: #A3A9B7;
+			  width: 3px;
+			  height: 3px;
+			  border-radius: 2px;
+			}
+
+			/* Navegação */
+
+			ul#courses {
+			  display: flex;
+			  flex-direction: row;
+			}
+
+			li.course {
+			  color: #4D4D4D;
+			  padding-bottom: 8px;
+			  padding-inline: 8px;
+			}
+
+			li.course:hover {
+			  padding-bottom: 7px;
+			  color: #2C2C2C;
+			  border-bottom: 2px solid #2C2C2C;
+			}
+
+			li#fe {
+			  font-weight: 500;
+			  color: #38A2FF;
+			  padding-bottom: 7px;
+			  border-bottom: 2px solid #38A2FF;
+			}
+
+			li#fe:hover {
+			  color: #007BE7;
+			  border-bottom: 2px solid #007BE7;
+			}
+
+			ul#classes {
+			  display: flex;
+			  flex-direction: column;
+			  margin-block: 24px;
+			  gap: 4px;
+			}
+
+			#hrsolid {
+			  padding: 0;
+			  margin: 0;
+			}
+
+			/* Sobre mim */
+
+			article#about {
+				flex-direction: column;
+				display: flex;
+				gap: 16px;
+			}
+
+			div.text {
+				flex-direction: column;
+				display: flex;
+				gap: 8px;
+			}
+
+			/* Contato */
+			article#contact {
+				flex-direction: column;
+				display: flex;
+				gap: 16px;
+			}
+			form {
+				align-items: left;
+			    justify-content: left;
+				flex-direction: column;
+				display: flex;
+				gap: 12px;
+			}
+			div#form{
+			    width: 800px;
+			    display: grid;
+			    grid-template-columns: 1fr 1fr;
+			    grid-column-gap: 12px;
+			    grid-row-gap: 12px;
+			    align-items: left;
+			    justify-content: left;
+			  }
+			input[type=text].form, select.form, textarea.form{
+			    background-color: #F9FAFC;
+			    font-family: 'Poppins', sans-serif;
+			    font-weight: 400;
+			    font-size: 16px;
+			    color: #2C2C2C;
+			    padding: 12px 20px;
+			    display: inline-block;
+			    border: 2px solid #E4E6EB;
+			    border-radius: 20px;
+			    box-sizing: border-box;
+			    -webkit-transition: 0.5s;
+			    transition: 0.5s;
+			    outline: none;
+			    margin: 0;
+			  }
+			input[type=text].form:focus, select.form:focus, textarea.form:focus {
+			    border: 2px solid #38A2FF;
+			  }
+			input[type=text].form, select.form{
+			    height: 56px;
+			  }
+			input[type=text].form{
+			    width: 404px;
+			  }
+			input[type=text].form::placeholder, textarea::placeholder{
+			    color:rgba( 57, 57, 57, 0.6);
+			  }
+			select.form{
+			    width: 820px;
+			    color:rgba( 57, 57, 57, 0.9);
+			  }
+			textarea.form{
+			    width: 820px;
+			  }
+			input[type=submit].buttom{
+				background-color: #38A2FF;
+			  	color: #EBF6FF;
+			  	border: none;
+			  	font-family: 'Poppins', Arial, sans-serif;
+			  	font-weight: 500;
+			  	font-size: 14px;
+			  	padding-block: 12px;
+			  	padding-inline: 32px;
+			  	border-radius: 14px;
+			  	text-align: center;
+			  	text-decoration: none;
+			  	display: inline-block;
+			  }
+			input[type=submit].buttom:hover {
+			    background-color: #007BE7;
+			  }  
+
+
+			/* Clear floats after the columns 
+			section::after {
+			  background: #ccc;
+			  content: "";
+			  clear: both;
+			} */
+
+			/* Style the footer */
+			footer {
+			  background-color: white;
+			  padding: 24px;
+			  text-align: center;
+			  color: #4D4D4D;
+			  border-radius:42px 42px 0px 0px;
+			  bottom: 0;
+			  width: 100%;
+			}
+
+			/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+			@media (max-width: 600px) {
+			  nav, article {
+			    width: 100%;
+			    height: auto;
+			  }
+			}
+			</style>
+	</head>
+	<body>
+
+		<header>
+			<section id="title">
+				<h2>Curso Front-End - HTML</h2>
+			</section>
+
+			<section>
+				<img width="200" src="https://media.licdn.com/dms/image/D4D03AQHnL7PiHZUIUw/profile-displayphoto-shrink_800_800/0/1679154515365?e=1700092800&v=beta&t=uUNOyutyz-4uT_8jap87Kzcx_gya0jUFE1pPfqKJsqI" alt="Anna Maria Lima da Silva" id="imgheader">
+			</section>
+
+		</header>
+
+		<hr class="solid">
+
+		<main>
+
+			<section class="body" id="left">
+
+				<article id="profile">
+
+					<img width="200" src="https://media.licdn.com/dms/image/D4D03AQHnL7PiHZUIUw/profile-displayphoto-shrink_800_800/0/1679154515365?e=1700092800&v=beta&t=uUNOyutyz-4uT_8jap87Kzcx_gya0jUFE1pPfqKJsqI" height="200" alt="Anna Maria Lima da Silva" id="imgprofile">
+					
+					<h2 id="name">Anna Maria Lima da Silva</h2>
+
+					<ul id="interests">
+						<li class="interest">UI Design</li>
+						<li class="interest">UX Design</li>
+						<li class="interest">Programação</li>
+					</ul>
+
+					<button>Adicionar</button>
+
+					<div id="bio">
+						<p>Estudante de Ciências da Computação na <strong>UVV</strong> </p>
+						<p>Estudante de de UI Design, UX Design e Front-End Development na <strong>EBAC</strong> </p>
+					</div>
+
+					<ul id="socials">
+						<li class="social"><a href="https://www.linkedin.com/in/anna-maria-da-silva-816a9b239/" target="_blank" class="social">LinkedIn</a></li>
+						<div class="dot"></div>
+						<li class="social" class="social"><a href="https://www.instagram.com/annmochii" target="_blank" class="social">Instagram</a></li>
+						<div class="dot"></div>
+						<li class="social" class="social"><a href="https://github.com/Annmochii" target="_blank" class="social">GitHub</a></li>
+					</ul>
+
+
+				</article>
+
+				<article id="info">
+					<nav>
+						<ul id="courses">
+							<li class="course" id="ux">UX Design</li>
+							<li class="course" id="ui">UI Design</li>
+							<li class="course" id="fe">Front-End</li>
+						</ul>
+
+						<hr class="solid" id="hrsolid">
+
+						<ul id="classes">
+							<li class="class"><a href="01-introducao.html" class="class">Introdução</a></li>
+							<li class="class"><a href="02-listas-e-links.html" class="class">Listas e Links</a></li>
+							<li class="class"><a href="03-formatacao-de-texto.html" class="class">Formatação de Texto</a></li>
+							<li class="class"><a href="04-tabelas.html" class="class">Tabelas</a></li>
+							<li class="class"><a href="05-layouts.html" class="class">Layouts</a></li>
+							<li class="class"><a href="06-formularios.html" class="class">Formulários</a></li>
+						</ul>
+
+					</nav>
+				</article>
+
+			</section>
+
+			<section class="body" id="right">
+
+				<article id="about">
+					<h2>Sobre mim</h2>
+					<div class="text">
+						<p>Meu nome é Anna Maria Lima da Silva e sou de Colatina, no Espírito Santo. Desenvolvi um gosto pela informática desde criança e a partir disso resolvi cursar o curso da EBAC de Full-Stack Designer. O curso me ajudou a realmente decidir a carreira que seguiria e, graças a isso, me matriculei no curso de Ciências da Computação na Universidade de Vila Velha.</p>
+						<p>Acredito que os seres humanos evoluíram de uma forma que viver em sociedade é imprescindível. Desse modo, acredito que, o quanto mais conectados estivermos, melhor será para nossa saúde mental e física, com isso, meu objetivo é ajudar nessa revolução tecnológica, contribuindo para que o mundo seja cada vez mais conectado!</p>
+					</div>
+				</article>
+
+
+				<article id="contact">
+					<h2>Contato</h2>
+					<form action="/action_page.php">
+	                    <div id="form">
+	                        <input type="text" class="form" id="nome" placeholder="Nome" required>
+	                        <input type="text" class="form" id="email" placeholder="E-mail" required>
+	                        <input type="text" class="form" id="prazo" placeholder="Prazo">
+	                        <input type="text" class="form" id="orcamento" placeholder="Orçamento">
+	                    </div>
+	                    
+	                    <select class="form" id="tipo" required>
+	                        <option value=" ">Tipo de Serviço</option>
+	                        <option value="WWW">Criação de Website</option>
+	                        <option value="UI">Design de Interface</option>
+	                        <option value="UX">Serviço de UX Design</option>
+	                        <option value="consultoria">Consultoria de Design</option>
+	                    </select>
+	                    <textarea class="form" id="mensagem" rows="10" cols="30" placeholder="Me conte mais sobre o seu projeto..."></textarea>
+	                    
+	                    <a href="./scr/index.html"><input type="submit" class="buttom" value="Enviar mensagem"></a>
+	                </form>
+				</article>
+
+			</section>
+
+		</main>
+
+		<footer>
+			<p>Desenvolvido por <a href="https://github.com/Annmochii" target="_blank"> Anna Maria Lima da Silva </a> </p>
+		</footer>
+		
+	</body>
+</html>
